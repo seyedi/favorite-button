@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fav The Card</title>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <meta name="description" content="Favoriting a card with cool transition effect to get inspired" />
+  <meta name="keywords" content="transition, css3, css, card, web design, mobile" />
+  <meta name="author" content="css-tricks.ir" />
+
+
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link href='http://fonts.googleapis.com/css?family=Scheherazade&subset=arabic,latin' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" type="text/css" href="css/prefixed-style.css" />
+
+  <!--[if IE]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  <figure class="mycard">
+    <img src="http://i57.tinypic.com/de8cb9.jpg" alt="card's Photo" />
+    <figcaption class="caption">
+      <h3 class="title">اساس اخلاق</h3>
+      <p class="desc">اصل و اساسی که تمام اخلاق گرایان به راستی در باب آن نظری یکسان دارند، این است: کسی را نیازار و هرچه می توانی به دیگران یاری برسان.</p>
+      <button type="button" class="fab">
+        <span class="star">
+          <span class="star-icon fa fa-star"></span>
+        </span>
+      </button>
+    </figcaption>
+  </figure>
+
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript">
+    var fab  = $(".fab"),
+        star = $(".star");
+
+    fab.click(function() {
+      if (star.hasClass("starred")) {
+        star.removeClass("starred");
+        star.addClass("unstarred");
+      } else if (star.hasClass("unstarred")) {
+        star.removeClass("unstarred");
+        star.addClass("starred");
+      } else {
+        star.addClass("starred");
+      }
+    });
+  </script>
+</body>
+</html>
